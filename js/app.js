@@ -8,22 +8,27 @@ var pikeAndFirst = {
   avgCookieSale: 6.3,
   cookieTime: function() {
     var hoursOfOperation = 12 - this.open + this.close;
+    var totalCookiesSold = 0;
     for(var i = 0; i < hoursOfOperation; i++) {
       var randomCustomerNumber = Math.floor(Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer);
-      var howManyCookiesBought = Math.round(this.avgCookieSale * randomCustomerNumber);
+      var cookiesSoldByHour = Math.round(this.avgCookieSale * randomCustomerNumber);
+      totalCookiesSold += cookiesSoldByHour;
       // get location of parent
       var ulEl = document.getElementById('pikeAndFirst');
       // create an element
       var liEl = document.createElement('li');
+      // if afternoon put pm and change back from military time, if before noon put am and give the list item the content
       if (this.open + i > 12) {
-        liEl.textContent = (this.open + i - 12) + 'pm: ' + howManyCookiesBought + ' cookies';
+        liEl.textContent = (this.open + i - 12) + 'pm: ' + cookiesSoldByHour + ' cookies';
       } else {
         // give the element content
-        liEl.textContent = this.open + i + 'am: ' + howManyCookiesBought + ' cookies';
+        liEl.textContent = this.open + i + 'am: ' + cookiesSoldByHour + ' cookies';
       }
       // append the element
       ulEl.appendChild(liEl);
     }
+    liEl.textContent = 'Total: ' + totalCookiesSold + ' cookies';
+    ulEl.appendChild(liEl);
   }
 };
 pikeAndFirst.cookieTime();

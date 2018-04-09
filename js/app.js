@@ -179,24 +179,3 @@ seaTacAir.cookieTime();
 seattleCenter.cookieTime();
 capitolHill.cookieTime();
 alki.cookieTime();
-
-
-
-// Makes a random number
-// function randomNumberGenerator() {
-//   var randomCustomerNumber = Math.floor(Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer);
-//   return randomCustomerNumber;
-// }
-
-// Used to show on webpage text created in JS
-// function renderSales() {
-//   // get location of parent
-//   var ulEl = document.getElementById('pikeAndFirst');
-//   // create an element
-//   var liEl = document.createElement('li');
-//   // give the element content
-//   liEl.textContent = '6am: 16 cookies';
-//   // append the element
-//   ulEl.appendChild(liEl);
-// }
-// renderSales();

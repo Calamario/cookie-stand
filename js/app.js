@@ -175,6 +175,7 @@ var alki = {
 };
 
 pikeAndFirst.cookieTime();
+console.log(pikeAndFirst.hourlySaleArray);
 seaTacAir.cookieTime();
 seattleCenter.cookieTime();
 capitolHill.cookieTime();

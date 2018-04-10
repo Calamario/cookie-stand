@@ -1,0 +1,36 @@
+body {
+  background-color: coral;
+}
+
+
+
+#our-story {
+  background-color: mediumaquamarine;
+  float: left;
+  margin: 10px 10px 10px 10px;
+}
+
+#our-menu {
+  background-color: mediumaquamarine;
+  float: left;
+  margin: 10px 10px 10px 10px;
+}
+
+#location {
+  background-color: mediumaquamarine;
+  float: left;
+  margin: 10px 10px 10px 10px;
+}
+
+#contact-us {
+  background-color: mediumaquamarine;
+  margin: 10px 10px 10px 10px;
+  float: left;
+}
+
+
+
+#cookiePic {
+  width: 40%;
+  margin: 20px 20px;
+}

@@ -6,12 +6,14 @@ var hoursOfOperation = 12 - timeOpen + timeClose;
 var allStoreInfo = [];
 var totalByHourArray = [];
 
+// creates element by taking in two strings 'the content and what element to make' as parameters 
 function createEl(elementText, tag) {
   var newEl  = document.createElement(tag);
   newEl.textContent = elementText;
   return newEl;
 }
 
+// Constructor function
 function Store(storeName, minCustomer, maxCustomer, avgCookieSale) {
   this.storeName = storeName;
   this.minCustomer = minCustomer;
@@ -45,17 +47,13 @@ Store.prototype.calculateTotalCookiesAtStore = function() {
 Store.prototype.renderRow = function () {
   var tBody = document.getElementById('hourlyCookie');
   var trEl = createEl(' ', 'tr');
-  // var trEl = document.createElement('tr');
   var tdEl = createEl(this.storeName, 'td');
-  // var tdEl = document.createElement('td');
-  // tdEl.textContent = this.storeName;
   trEl.appendChild(tdEl);
   for (var i in this.hourlySaleArray) {
     tdEl = createEl(this.hourlySaleArray[i], 'td');
     trEl.appendChild(tdEl);
   }
   tdEl = createEl(this.totalSold, 'td');
-  // tdEl.textContent = this.totalSold;
   trEl.appendChild(tdEl);
   tBody.appendChild(trEl);
 };
@@ -64,7 +62,6 @@ Store.prototype.renderRow = function () {
 function renderTime(id, whichTable) {
   var tBodyEl = document.getElementById(id);
   var thEl = createEl(' ', 'th');
-  // var thEl = document.createElement('th');
   tBodyEl.appendChild(thEl);
   for(var i = 0; i < hoursOfOperation; i ++) {
     thEl = document.createElement('th');

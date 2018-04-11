@@ -6,7 +6,7 @@ var hoursOfOperation = 12 - timeOpen + timeClose;
 var allStoreInfo = [];
 var totalByHourArray = [];
 
-// creates element by taking in two strings 'the content and what element to make' as parameters 
+// creates element by taking in two strings 'the content and what element to make' as parameters
 function createEl(elementText, tag) {
   var newEl  = document.createElement(tag);
   newEl.textContent = elementText;
@@ -83,8 +83,9 @@ function renderTime(id, whichTable) {
 // function to render how many cookies are sold in total for each hour
 function renderHourlyTotal() {
   var tFootEl = document.getElementById('totalByHour');
-  var trEl = document.createElement('tr');
-  trEl.textContent = 'Totals';
+  var trEl = createEl('Totals', 'tr');
+  // var trEl = document.createElement('tr');
+  // trEl.textContent = 'Totals';
   var totalEachHour = 0;
   var totalInADay = 0;
   for (var i = 0; i < hoursOfOperation; i++) {
@@ -125,6 +126,18 @@ function totalTosserNeeded() {
   }
 }
 
+function handleNewStoreForm(event){
+  event.preventDefault();
+  var formElement = event.target;
+  var newStore = new Store(formElement.storeName.value, formElement.minCustomer.value, formElement.maxCustomer.value, formElement.avgCookieSale.value);
+  newStore.calculateHourlyCookiesSold();
+  newStore.calculateTotalCookiesAtStore();
+  newStore.renderRow();
+}
+
+var newStoreForm = document.getElementById('input-new-store-form');
+newStoreForm.addEventListener('submit', handleNewStoreForm);
+
 var pikeAndFirst = new Store('1st & Pike', 23, 65, 6.3);
 var seaTacAir = new Store('SeaTac Airport', 3, 24, 1.2);
 var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
@@ -145,3 +158,4 @@ renderTime('tosserNeeded', 'tosser needed');
 totalTosserNeeded();
 
 console.log(allStoreInfo);
+

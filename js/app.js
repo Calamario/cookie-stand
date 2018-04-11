@@ -1,7 +1,7 @@
 'use strict';
 
 var timeOpen = 6; // for am
-var timeClose = 8; // for pm
+var timeClose = 9; // for pm
 var hoursOfOperation = 12 - timeOpen + timeClose;
 var allStoreInfo = [];
 var totalByHourArray = [];
@@ -54,7 +54,6 @@ Store.prototype.renderRow = function () {
 function renderTime() {
   var tBodyEl = document.getElementById('time');
   var tdEl = document.createElement('th');
-  tdEl.textContent = '     ';
   tBodyEl.appendChild(tdEl);
   for(var i = 0; i < hoursOfOperation; i ++) {
     tdEl = document.createElement('th');
@@ -97,7 +96,6 @@ function renderHourlyTotal() {
   tFootEl.appendChild(trEl);
 }
 
-
 var pikeAndFirst = new Store('1st & Pike', 23, 65, 6.3);
 var seaTacAir = new Store('SeaTac Airport', 3, 24, 1.2);
 var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
@@ -114,15 +112,7 @@ for (var i = 0; i < storeArray.length; i++) {
 }
 renderHourlyTotal();
 
-
 console.log(allStoreInfo);
-console.log(totalByHourArray);
-// pikeAndFirst.calculateHourlyCookiesSold();
-// pikeAndFirst.calculateTotalCookiesAtStore();
-// pikeAndFirst.renderRow();
-// console.log(allStoreInfo);
-
-
 
 
 

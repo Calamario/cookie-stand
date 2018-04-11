@@ -105,7 +105,8 @@ article {
 
 
 
-/* ------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------Sales CSS--------------------------------------------------- */
+
 
 #sales {
   font-family: 'Cabin', sans-serif;
@@ -116,6 +117,7 @@ article {
 table {
   text-align:center;
   border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
 table, th, td, tr {
@@ -124,4 +126,8 @@ table, th, td, tr {
 
 #grandTotal {
   background-color: yellow;
+}
+
+#tosserNeeded {
+  background-color: mediumseagreen;
 }

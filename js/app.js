@@ -96,7 +96,7 @@ function renderHourlyTotal() {
   tFootEl.appendChild(trEl);
 }
 
-function totalTosserNeeded(storeArray) {
+function totalTosserNeeded() {
   var extraEmployees = 0;
   var tableEl = document.getElementById('tosserNeeded');
   for (var j in allStoreInfo) {
@@ -133,7 +133,7 @@ for (var i = 0; i < storeArray.length; i++) {
 renderHourlyTotal();
 
 renderTime('tosserNeeded');
-totalTosserNeeded(storeArray);
+totalTosserNeeded();
 
 console.log(allStoreInfo);
 

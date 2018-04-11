@@ -58,7 +58,7 @@ Store.prototype.renderRow = function () {
   tBody.appendChild(trEl);
 };
 
-// function to render time
+// function to render time in the tHEAD
 function renderTime(id, whichTable) {
   var tBodyEl = document.getElementById(id);
   var thEl = createEl(' ', 'th');
@@ -80,12 +80,10 @@ function renderTime(id, whichTable) {
   }
 }
 
-// function to render how many cookies are sold in total for each hour
+// function to render how many cookies are sold in total for each hour in the tFOOT
 function renderHourlyTotal() {
   var tFootEl = document.getElementById('totalByHour');
   var trEl = createEl('Totals', 'tr');
-  // var trEl = document.createElement('tr');
-  // trEl.textContent = 'Totals';
   var totalEachHour = 0;
   var totalInADay = 0;
   for (var i = 0; i < hoursOfOperation; i++) {
@@ -93,39 +91,39 @@ function renderHourlyTotal() {
       totalEachHour += allStoreInfo[j].hourlySaleArray[i];
       totalInADay += allStoreInfo[j].hourlySaleArray[i];
     }
-    var tdEl = document.createElement('td');
-    tdEl.textContent = totalEachHour;
+    var tdEl = createEl(totalEachHour, 'td');
     trEl.appendChild(tdEl);
     totalByHourArray.push(totalEachHour);
     totalEachHour = 0;
   }
-  tdEl = document.createElement('td');
-  tdEl.textContent = totalInADay;
+  tdEl = createEl(totalInADay, 'td');
   tdEl.setAttribute('id','grandTotal');
   trEl.appendChild(tdEl);
   tFootEl.appendChild(trEl);
 }
 
+// Makes a new table to store how many employees are needed at each location per hour!
 function totalTosserNeeded() {
   var extraEmployees = 0;
   var tableEl = document.getElementById('tosserNeeded');
   for (var j in allStoreInfo) {
-    var trEl = document.createElement('tr');
-    trEl.textContent = allStoreInfo[j].storeName;
-    tableEl.appendChild(trEl);
+    var trEl = createEl('', 'tr');
+    var tdEl = createEl(allStoreInfo[j].storeName, 'td');
+    trEl.appendChild(tdEl);
     for (var i = 0; i < hoursOfOperation; i++) {
-      var tdEl = document.createElement('td');
       extraEmployees = Math.ceil((allStoreInfo[j].hourlySaleArray[i] - 40) / 20);
       if (extraEmployees < 0) {
-        tdEl.textContent = 0;
+        tdEl = createEl(0, 'td');
       } else {
-        tdEl.textContent = extraEmployees;
+        tdEl = createEl(extraEmployees, 'td');
       }
       trEl.appendChild(tdEl);
     }
+    tableEl.appendChild(trEl);
   }
 }
 
+// Did an event happen? Here's what needs to go down!
 function handleNewStoreForm(event){
   event.preventDefault();
   var formElement = event.target;
@@ -135,9 +133,11 @@ function handleNewStoreForm(event){
   newStore.renderRow();
 }
 
+// Listen for Events!
 var newStoreForm = document.getElementById('input-new-store-form');
 newStoreForm.addEventListener('submit', handleNewStoreForm);
 
+// Making new instances!
 var pikeAndFirst = new Store('1st & Pike', 23, 65, 6.3);
 var seaTacAir = new Store('SeaTac Airport', 3, 24, 1.2);
 var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);

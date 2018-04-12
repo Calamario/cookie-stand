@@ -85,8 +85,10 @@ function renderTime(id, whichTable) {
 // function to render how many cookies are sold in total for each hour in the tFOOT
 function renderHourlyTotal() {
   var tFootEl = document.getElementById('totalByHour');
-  var trEl = createEl('Totals', 'tr');
+  var trEl = createEl('', 'tr');
   trEl.setAttribute('id', 'removeMe');
+  var tdEl = createEl('Total', 'td');
+  trEl.appendChild(tdEl);
   var totalEachHour = 0;
   var totalInADay = 0;
   for (var i = 0; i < hoursOfOperation; i++) {
@@ -94,7 +96,7 @@ function renderHourlyTotal() {
       totalEachHour += allStoreInfo[j].hourlySaleArray[i];
       totalInADay += allStoreInfo[j].hourlySaleArray[i];
     }
-    var tdEl = createEl(totalEachHour, 'td');
+    tdEl = createEl(totalEachHour, 'td');
     trEl.appendChild(tdEl);
     totalByHourArray.push(totalEachHour);
     totalEachHour = 0;

@@ -5,6 +5,8 @@ var timeClose = 9; // pm
 var hoursOfOperation = 12 - timeOpen + timeClose;
 var allStoreInfo = [];
 var totalByHourArray = [];
+var tFootEl = document.getElementById('totalByHour');
+var tableEl = document.getElementById('tosserNeeded');
 
 // creates element by taking in two strings 'the content and what element to make' as parameters
 function createEl(elementText, tag) {
@@ -27,7 +29,7 @@ function Store(storeName, minCustomer, maxCustomer, avgCookieSale) {
 Store.prototype.calculateHourlyCookiesSold = function() {
   for(var i = 0; i < hoursOfOperation; i++) {
     // Generates random number of customer for that hour
-    var randomCustomerNumber = Math.floor(Math.random() * (this.maxCustomer - this.minCustomer + 1) + this.minCustomer);
+    var randomCustomerNumber = Math.floor(Math.random() * ((this.maxCustomer - this.minCustomer) + 1) + (this.minCustomer));
     // Calculates the amount of cookies sold that hour
     var cookiesSoldByHour = Math.round(this.avgCookieSale * randomCustomerNumber);
     // push into the array to store data
@@ -84,6 +86,7 @@ function renderTime(id, whichTable) {
 function renderHourlyTotal() {
   var tFootEl = document.getElementById('totalByHour');
   var trEl = createEl('Totals', 'tr');
+  trEl.setAttribute('id', 'removeMe');
   var totalEachHour = 0;
   var totalInADay = 0;
   for (var i = 0; i < hoursOfOperation; i++) {
@@ -105,7 +108,6 @@ function renderHourlyTotal() {
 // Makes a new table to store how many employees are needed at each location per hour!
 function totalTosserNeeded() {
   var extraEmployees = 0;
-  var tableEl = document.getElementById('tosserNeeded');
   for (var j in allStoreInfo) {
     var trEl = createEl('', 'tr');
     var tdEl = createEl(allStoreInfo[j].storeName, 'td');
@@ -127,10 +129,12 @@ function totalTosserNeeded() {
 function handleNewStoreForm(event){
   event.preventDefault();
   var formElement = event.target;
-  var newStore = new Store(formElement.storeName.value, formElement.minCustomer.value, formElement.maxCustomer.value, formElement.avgCookieSale.value);
+  var newStore = new Store(formElement.storeName.value, Number(formElement.minCustomer.value), Number(formElement.maxCustomer.value), Number(formElement.avgCookieSale.value));
   newStore.calculateHourlyCookiesSold();
   newStore.calculateTotalCookiesAtStore();
   newStore.renderRow();
+  tFootEl.removeChild(document.getElementById('removeMe'));
+  renderHourlyTotal();
 }
 
 // Listen for Events!

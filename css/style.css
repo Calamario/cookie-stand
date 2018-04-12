@@ -7,26 +7,30 @@ body {
   font-family: 'Arvo', serif;
 }
 
+/* --------------------------------------------Title--------------------------------------------------- */
+#my-container {
+  width:60%;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+
 h1 {
   font-size: 50px;
   font-family: 'Vidaloka', serif;
-  text-align: center;
-  margin-top: 5%;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 5%;
-}
+/* --------------------------------------------Navigator--------------------------------------------------- */
 
+ul {
+  text-align: center;
+}
 li {
-  display:inline-block;
-  width: 20%;
-  margin-bottom: 3%;
-}
-
-li:first-child {
-  margin-left: 11%;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 2%;
 }
 
 .button {
@@ -48,6 +52,8 @@ li:first-child {
   background-color: rgb(167, 209, 195);
   color: white;
 }
+
+/* --------------------------------------------Content--------------------------------------------------- */
 
 #cookiePic {
   background-color: mediumaquamarine;
@@ -101,9 +107,28 @@ article {
   border-radius: 20px;
 }
 
-br {
-  line-height: 1.5;
+/* #contactInfo {
+  padding-top: 10%;
+  padding-bottom: 10%;
+} */
+
+.employeeContent {
+  margin: 0;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 3%;
+
 }
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 1px;
+}
+
+label{
+  display: block;
+}
+
 
 /* --------------------------------------------Sales CSS--------------------------------------------------- */
 
@@ -130,4 +155,11 @@ table, th, td, tr {
 
 #tosserNeeded {
   background-color: mediumseagreen;
+}
+
+#input-new-store-form {
+  width: 40%;
+  margin:0 auto;
+  border: 2px solid white;
+  padding-left: 20%;
 }

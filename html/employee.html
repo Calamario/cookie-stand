@@ -16,20 +16,28 @@
       <ul>
         <li id="home"><a href="../index.html" class="button">Home</a></li>
         <li id="our-story"><a href="our-story.html" class="button">Our Story</a></li>
+        <li id="our-menu"><a href="our-menu.html" class="button">Our Menu</a></li>
         <li id="location"><a href="location.html" class="button">Location</a></li>
         <li id="contact-us"><a href="contact-us.html" class="button">Contact Us</a></li>
-        <li id="employee-page"><a href="employee.html" class="button">Employee</a></li>
       </ul>
     </div>
-    <img id="cookiePic" src="https://amyshealthybaking.com/wp-content/uploads/2014/10/carrot-cake-oatmeal-cookies_5092.jpg" alt="Delicious Salmon Cookies">
-    <article>
-      <div id="recipe">
-        <img id="salmonPic" src="../img/salmon.png" alt="salmon picture">
-        <p id="plusSign" > + </p>
-        <img id="otherIngredient" src="../img/9-2-cookie-png-image.png_400x400.png" alt="Cookies">
-        <p id="plusSign">= Delicious</p>
+    <article class="employeeContent">
+      <div>
+          <h3>Future Employee</h3>
+          <p>Interesed in joining the team?</p>
+          <p>Call us at (XXX)XXX-XXXX or send your application to XXX@XXX</p>
       </div>
     </article>
-    <p id="hourOfOp"><strong>Hours</strong> 6:00am - 8:00pm</p>
+    <article class="employeeContent">
+      <div>
+        <h3>Current Employee</h3>
+        <form id="loginToEmployee">
+          <input type="text" name="username" id="username-input" placeholder="Username">
+          <input type="password" name="password" id="password-input" placeholder="Password">
+          <input type="submit">
+        </form>
+      </div>
+    </article>
+    <script src="../js/app2.js"></script>
   </body>
 </html>

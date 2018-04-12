@@ -1,185 +1,162 @@
-/* Add location link window to google map
-change home button color */
 
 
 body {
-  background-color: coral;
+  background-color: #fb9a93;
   font-family: 'Arvo', serif;
+  color: #e91133;
+  font-size: 16px;
 }
 
-/* --------------------------------------------Title--------------------------------------------------- */
-#my-container {
-  width:60%;
-  margin: 0 auto;
-  margin-top: 5%;
-  margin-bottom: 5%;
+/* --------------------------------------------Header--------------------------------------------------- */
+
+header div {
+  margin-top: 3em;
+  margin-bottom: 3em;
   text-align: center;
 }
 
-
-h1 {
+header div h1 {
   font-size: 50px;
   font-family: 'Vidaloka', serif;
 }
 
-/* --------------------------------------------Navigator--------------------------------------------------- */
+header div h2 {
+  line-height: 1.5;
+}
 
-ul {
+nav {
+
   text-align: center;
 }
-li {
+
+nav ul li {
   display: inline-block;
-  text-align: left;
-  margin-bottom: 2%;
+  margin-bottom: 3em;
 }
 
-.button {
-  background-color: mediumaquamarine;
+nav ul li a {
+  background-color: #018b5a;
   border-radius: 10px;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
+  color: #ede9dd;
+  padding: 15px 40px;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  margin: 0 1em;
   transition-duration: 0.4s;
   cursor: pointer;
 }
 
-.button:hover {
-  background-color: rgb(167, 209, 195);
-  color: white;
+nav ul li:hover a {
+  background-color: #94d9d4;
+  color: #fb9a93;
 }
 
-/* --------------------------------------------Content--------------------------------------------------- */
+/* --------------------------------------------Body--------------------------------------------------- */
 
-#cookiePic {
-  background-color: mediumaquamarine;
-  padding: 20px;
+main {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ede9dd;
   border-radius: 10px;
-  width: 40%;
-  margin: 10px;
-  margin-left: 3%;
-  float: left;
-}
-
-article {
-  background-color: rgb(235, 235, 114);
-  border-radius: 10px;
+  padding: 30px 0;
   text-align: center;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  margin-right: 3%;
-  margin-left: 49%;
-  margin-bottom: 3%;
-  margin-top:1%;
-  line-height: 1.5;
+  font-size: 0;
 }
+
+main img {
+  width: 40%;
+  padding: 20px;
+  background-color: #94d9d4;
+  border-radius: 10px;
+}
+
+main article {
+  background-color: #94d9d4;
+  border-radius: 10px;
+  width:  40%;
+  padding: 20px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 30px;
+  margin-top: 40px;
+}
+
+main article p {
+  font-family: 'Arvo', serif;
+  color: #e91133;
+  font-size: 16px;
+}
+
+p:last-child {
+  font-family: 'Arvo', serif;
+  color: #e91133;
+  font-size: 16px;
+}
+
+/* --------------------------------------------Our Story--------------------------------------------------- */
 
 #ourInfo {
-  padding: 1%;
-  margin-right: 3%;
-  margin-left: 49%;
-  margin-bottom: 3%;
-  margin-top:1%;
-  line-height: 1.5;
-}
-
-#hourOfOp {
-  text-align: center;
-  margin-right: 3%;
-}
-
-#salmonPic {
-  width: 30%;
-}
-
-#plusSign {
-  font-size: 50px;
+  background-color: #94d9d4;
+  border-radius: 10px;
+  width:  40%;
+  padding: 20px;
   display: inline-block;
+  vertical-align: top;
+  margin-left: 30px;
+  margin-top: 0px
 }
 
-#otherIngredient {
-  width: 15%;
-  display: inline-block; 
-  border-radius: 20px;
+#ourInfo p:first-child {
+  margin-bottom: 1em;
 }
 
-/* #contactInfo {
-  padding-top: 10%;
-  padding-bottom: 10%;
-} */
+/* --------------------------------------------Our Recipe--------------------------------------------------- */
 
-.employeeContent {
-  margin: 0;
-  width: 80%;
-  margin: auto;
-  margin-bottom: 1%;
+#recipe {
+  background-color: #94d9d4;
+  border-radius: 10px;
+  width:  40%;
+  padding: 20px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 30px;
+  margin-top: 0px
 }
 
-.employeeContent:last-of-type {
-  margin-bottom: 0;
+#recipe div p {
+  font-size: 25px;
 }
 
-h3 {
-  font-size: 20px;
-  margin-bottom: 1px;
+#recipe div img:first-child {
+  width: 50%;
 }
 
-label{
-  display: block;
+#recipe div p:last-child {
+  font-size: 40px;
 }
 
+/* --------------------------------------------Location--------------------------------------------------- */
 
-/* --------------------------------------------Sales CSS--------------------------------------------------- */
 
+/* --------------------------------------------Contact Info--------------------------------------------------- */
 
-#sales {
-  font-family: 'Cabin', sans-serif;
+#contactInfo {
+  background-color: #94d9d4;
+  border-radius: 10px;
+  width:  40%;
+  padding: 20px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 30px;
+  margin-top: 0px
+}
+
+label {
+  font-family: 'Arvo', serif;
+  color: #e91133;
+  font-size: 16px;
+}
+
+#contactInfo p {
   line-height: 2;
-  width: 100%;
-}
-
-table {
-  text-align:center;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-table, th, td, tr {
-  border: 2px solid white;
-}
-
-td:first-child {
-  background-color: mediumaquamarine;
-}
-
-th:not(:first-child) {
-  background-color: mediumaquamarine;
-}
-
-tfoot {
-  background-color: mediumaquamarine;
-}
-
-#grandTotal {
-  background-color: yellow;
-}
-
-#tosserNeeded {
-  background-color: mediumseagreen;
-}
-
-fieldset {
-  width: 40%;
-  margin:0 auto;
-  border: 2px solid white;
-  padding-left: 20%;
-}
-
-legend {
-  color: black;
-  font-size: 20px;
 }

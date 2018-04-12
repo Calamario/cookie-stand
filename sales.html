@@ -17,16 +17,19 @@
       <tfoot id="totalByHour"></tfoot>
     </table>
     <form id="input-new-store-form">
+      <fieldset>
+        <legend>Add a new store</legend>
         <label>New Store Location</label>
-        <input type="text" id="storeName-input" name="storeName" />
+        <input type="text" id="storeName-input" name="storeName" placeholder="New Store Location" />
         <label>Minimum Customer Estimate</label>
-        <input type="number" id="minCustomer-input" name="minCustomer" min="0"/>
+        <input type="number" id="minCustomer-input" name="minCustomer" min="0" placeholder="Minimum Customer"/>
         <label>Maximum Customer Estimate</label>
-        <input type="number" id="maxCustomer-input" name="maxCustomer" />
+        <input type="number" id="maxCustomer-input" name="maxCustomer" placeholder="Maximum Customer"/>
         <label>Average Cookie Sold per Customer</label>
-        <input type="number" id="avgCookieSale-input" name="avgCookieSale" step="0.1"/>
+        <input type="number" id="avgCookieSale-input" name="avgCookieSale" step="0.1" placeholder="Avg. Cookie/Person"/>
         <input type="submit">
-      </form>
+      </fieldset>
+    </form>
     <table id="tosserNeeded">
       <h3>Extra Employees Needed</h3>
     </table>

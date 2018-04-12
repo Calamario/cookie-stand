@@ -152,6 +152,18 @@ table, th, td, tr {
   border: 2px solid white;
 }
 
+td:first-child {
+  background-color: mediumaquamarine;
+}
+
+th:not(:first-child) {
+  background-color: mediumaquamarine;
+}
+
+tfoot {
+  background-color: mediumaquamarine;
+}
+
 #grandTotal {
   background-color: yellow;
 }
@@ -160,9 +172,14 @@ table, th, td, tr {
   background-color: mediumseagreen;
 }
 
-#input-new-store-form {
+fieldset {
   width: 40%;
   margin:0 auto;
   border: 2px solid white;
   padding-left: 20%;
+}
+
+legend {
+  color: black;
+  font-size: 20px;
 }

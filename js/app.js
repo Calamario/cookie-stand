@@ -6,7 +6,7 @@ var hoursOfOperation = 12 - timeOpen + timeClose;
 var allStoreInfo = [];
 var totalByHourArray = [];
 var tFootEl = document.getElementById('totalByHour');
-var tableEl = document.getElementById('tosserNeeded');
+// var tableEl = document.getElementById('tosserNeeded');
 
 // creates element by taking in two strings 'the content and what element to make' as parameters
 function createEl(elementText, tag) {
@@ -85,8 +85,10 @@ function renderTime(id, whichTable) {
 // function to render how many cookies are sold in total for each hour in the tFOOT
 function renderHourlyTotal() {
   var tFootEl = document.getElementById('totalByHour');
-  var trEl = createEl('Totals', 'tr');
+  var trEl = createEl('', 'tr');
   trEl.setAttribute('id', 'removeMe');
+  var tdEl = createEl('Total', 'td');
+  trEl.appendChild(tdEl);
   var totalEachHour = 0;
   var totalInADay = 0;
   for (var i = 0; i < hoursOfOperation; i++) {
@@ -94,7 +96,7 @@ function renderHourlyTotal() {
       totalEachHour += allStoreInfo[j].hourlySaleArray[i];
       totalInADay += allStoreInfo[j].hourlySaleArray[i];
     }
-    var tdEl = createEl(totalEachHour, 'td');
+    tdEl = createEl(totalEachHour, 'td');
     trEl.appendChild(tdEl);
     totalByHourArray.push(totalEachHour);
     totalEachHour = 0;
@@ -105,25 +107,26 @@ function renderHourlyTotal() {
   tFootEl.appendChild(trEl);
 }
 
+// Turned off since made in one function. Will keep for future reference on Logic.
 // Makes a new table to store how many employees are needed at each location per hour!
-function totalTosserNeeded() {
-  var extraEmployees = 0;
-  for (var j in allStoreInfo) {
-    var trEl = createEl('', 'tr');
-    var tdEl = createEl(allStoreInfo[j].storeName, 'td');
-    trEl.appendChild(tdEl);
-    for (var i = 0; i < hoursOfOperation; i++) {
-      extraEmployees = Math.ceil((allStoreInfo[j].hourlySaleArray[i] - 40) / 20);
-      if (extraEmployees < 0) {
-        tdEl = createEl(0, 'td');
-      } else {
-        tdEl = createEl(extraEmployees, 'td');
-      }
-      trEl.appendChild(tdEl);
-    }
-    tableEl.appendChild(trEl);
-  }
-}
+// function totalTosserNeeded() {
+//   var extraEmployees = 0;
+//   for (var j in allStoreInfo) {
+//     var trEl = createEl('', 'tr');
+//     var tdEl = createEl(allStoreInfo[j].storeName, 'td');
+//     trEl.appendChild(tdEl);
+//     for (var i = 0; i < hoursOfOperation; i++) {
+//       extraEmployees = Math.ceil((allStoreInfo[j].hourlySaleArray[i] - 40) / 20);
+//       if (extraEmployees < 0) {
+//         tdEl = createEl(0, 'td');
+//       } else {
+//         tdEl = createEl(extraEmployees, 'td');
+//       }
+//       trEl.appendChild(tdEl);
+//     }
+//     tableEl.appendChild(trEl);
+//   }
+// }
 
 // Did an event happen? Here's what needs to go down!
 function handleNewStoreForm(event){
@@ -158,8 +161,8 @@ for (var i = 0; i < storeArray.length; i++) {
 }
 renderHourlyTotal();
 
-renderTime('tosserNeeded', 'tosser needed');
-totalTosserNeeded();
+// renderTime('tosserNeeded', 'tosser needed');
+// totalTosserNeeded();
 
 console.log(allStoreInfo);
 

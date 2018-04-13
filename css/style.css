@@ -1,185 +1,263 @@
-/* Add location link window to google map
-change home button color */
 
 
 body {
-  background-color: coral;
+  background-color: #fb9a93;
   font-family: 'Arvo', serif;
+  color: #e91133;
+  font-size: 16px;
 }
 
-/* --------------------------------------------Title--------------------------------------------------- */
-#my-container {
-  width:60%;
+/* --------------------------------------------Header--------------------------------------------------- */
+
+header div {
+  width: fit-content;
   margin: 0 auto;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 3em;
+  margin-bottom: 3em;
   text-align: center;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
+header div:hover {
+  border-radius: 10px;
+  background-color: #fcaaa4;
+}
 
-h1 {
+header div h1 {
   font-size: 50px;
   font-family: 'Vidaloka', serif;
 }
 
-/* --------------------------------------------Navigator--------------------------------------------------- */
+header div h2 {
+  line-height: 1.5;
+}
 
-ul {
+nav {
+
   text-align: center;
 }
-li {
+
+nav ul li {
   display: inline-block;
-  text-align: left;
-  margin-bottom: 2%;
+  margin-bottom: 3em;
 }
 
 .button {
-  background-color: mediumaquamarine;
+  background-color: #018b5a;
   border-radius: 10px;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
+  color: #ede9dd;
+  padding: 15px 40px;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  margin: 0 1em;
   transition-duration: 0.4s;
   cursor: pointer;
 }
 
 .button:hover {
-  background-color: rgb(167, 209, 195);
-  color: white;
+  background-color: #94d9d4;
+  color: #fb9a93;
 }
 
-/* --------------------------------------------Content--------------------------------------------------- */
 
-#cookiePic {
-  background-color: mediumaquamarine;
-  padding: 20px;
-  border-radius: 10px;
-  width: 40%;
-  margin: 10px;
-  margin-left: 3%;
-  float: left;
-}
+/* --------------------------------------------Body--------------------------------------------------- */
 
-article {
-  background-color: rgb(235, 235, 114);
+main {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ede9dd;
   border-radius: 10px;
+  padding: 30px 0;
   text-align: center;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  margin-right: 3%;
-  margin-left: 49%;
-  margin-bottom: 3%;
-  margin-top:1%;
-  line-height: 1.5;
+  font-size: 0;
 }
 
-#ourInfo {
-  padding: 1%;
-  margin-right: 3%;
-  margin-left: 49%;
-  margin-bottom: 3%;
-  margin-top:1%;
-  line-height: 1.5;
+main img {
+  width: 40%;
+  padding: 20px;
+  background-color: #94d9d4;
+  border-radius: 10px;
+}
+
+main article {
+  background-color: #94d9d4;
+  border-radius: 10px;
+  width:  40%;
+  padding: 20px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 30px;
+  margin-top: 40px;
+}
+
+main article p {
+  font-family: 'Arvo', serif;
+  color: #e91133;
+  font-size: 16px;
 }
 
 #hourOfOp {
-  text-align: center;
-  margin-right: 3%;
+  font-family: 'Arvo', serif;
+  color: #e91133;
+  font-size: 16px;
+  margin-top: 1em;
 }
 
-#salmonPic {
-  width: 30%;
+/* --------------------------------------------Our Story--------------------------------------------------- */
+
+#ourInfo {
+  margin-top: 0px
 }
 
-#plusSign {
-  font-size: 50px;
-  display: inline-block;
+#ourInfo p:first-child {
+  margin-bottom: 1em;
 }
 
-#otherIngredient {
-  width: 15%;
-  display: inline-block; 
-  border-radius: 20px;
+/* --------------------------------------------Our Recipe--------------------------------------------------- */
+
+#recipe {
+  margin-top: 0px
 }
 
-/* #contactInfo {
-  padding-top: 10%;
-  padding-bottom: 10%;
-} */
+#recipe div p {
+  font-size: 25px;
+}
+
+#recipe div img:first-child {
+  width: 50%;
+}
+
+#recipe div p:last-child {
+  font-size: 40px;
+}
+
+/* --------------------------------------------Location--------------------------------------------------- */
+
+
+/* --------------------------------------------Contact Info--------------------------------------------------- */
+
+#contactInfo {
+  margin-top: 0px
+}
+
+label {
+  font-family: 'Arvo', serif;
+  color: #e91133;
+  font-size: 16px;
+}
+
+#contactInfo p {
+  line-height: 2;
+}
+
+/* --------------------------------------------Contact Info--------------------------------------------------- */
 
 .employeeContent {
-  margin: 0;
-  width: 80%;
+  background-color: #94d9d4;
+  border-radius: 10px;
+  width:  40%;
+  padding: 20px;
+  display: inline-block;
+  vertical-align: top;
   margin: auto;
-  margin-bottom: 1%;
+  font-size: 25px;
 }
 
-.employeeContent:last-of-type {
-  margin-bottom: 0;
+.employeeContent:last-child {
+  margin-left: 20px;
 }
 
-h3 {
-  font-size: 20px;
-  margin-bottom: 1px;
+.employeeContent h3 {
+  font-size: 25;
+  line-height: 1.5;
 }
 
-label{
-  display: block;
-}
+/* --------------------------------------------Sale --------------------------------------------------- */
 
-
-/* --------------------------------------------Sales CSS--------------------------------------------------- */
-
-
-#sales {
-  font-family: 'Cabin', sans-serif;
-  line-height: 2;
-  width: 100%;
-}
-
-table {
-  text-align:center;
-  border-collapse: collapse;
+#sales header {
+  margin: 10px;
   margin-bottom: 20px;
 }
 
-table, th, td, tr {
-  border: 2px solid white;
+#sales header h1{
+  display: inline-block;
+  color: #e91133;
+  font-size: 50px;
 }
 
-td:first-child {
-  background-color: mediumaquamarine;
+#sales header a {
+  float: right;
 }
 
-th:not(:first-child) {
-  background-color: mediumaquamarine;
+
+table {
+  border-collapse: collapse;
+  line-height: 1.5;
+  color:  #018b5a;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+th, td {
+  border: 2px solid #ede9dd;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ede9dd;
+}
+
+tbody td:first-child {
+  color:#e91133
+}
+
+tbody td:last-child {
+  background-color: #94d9d4;
+}
+
+td:hover {
+  background-color: greenyellow !important;
+  color: black;
+}
+
+tr:hover {
+  background-color: #018b5a;
+  color: #fb9a93;
+}
+
+tr:hover td:last-child {
+  background-color: #018b5a;
+  color: #fb9a93;
+}
+
+tr:nth-child(odd):hover {
+  background-color: #018b5a;
+  color: #fb9a93;
 }
 
 tfoot {
-  background-color: mediumaquamarine;
+  background-color: #94d9d4;
 }
 
-#grandTotal {
-  background-color: yellow;
+form {
+  width:fit-content;
+  border: 2px solid #ede9dd;
+  padding: 20px;
+  margin: 0 auto;
 }
 
-#tosserNeeded {
-  background-color: mediumseagreen;
+form legend {
+  font-size: 25px;
 }
 
-fieldset {
-  width: 40%;
-  margin:0 auto;
-  border: 2px solid white;
-  padding-left: 20%;
+form input {
+  display: block;
+  margin-top: 10px;
 }
 
-legend {
-  color: black;
-  font-size: 20px;
+form input:last-child {
+  display: inline;
+  text-align: center;
 }

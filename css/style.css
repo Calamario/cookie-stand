@@ -97,10 +97,11 @@ main article p {
   font-size: 16px;
 }
 
-p:last-child {
+#hourOfOp {
   font-family: 'Arvo', serif;
   color: #e91133;
   font-size: 16px;
+  margin-top: 1em;
 }
 
 /* --------------------------------------------Our Story--------------------------------------------------- */
@@ -238,4 +239,25 @@ tr:nth-child(odd):hover {
 
 tfoot {
   background-color: #94d9d4;
+}
+
+form {
+  width:fit-content;
+  border: 2px solid #ede9dd;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+form legend {
+  font-size: 25px;
+}
+
+form input {
+  display: block;
+  margin-top: 10px;
+}
+
+form input:last-child {
+  display: inline;
+  text-align: center;
 }

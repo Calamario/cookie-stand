@@ -12,7 +12,7 @@ body {
 header div {
   width: fit-content;
   margin: 0 auto;
-  margin-top: 1em;
+  margin-top: 0.5em;
   margin-bottom: 3em;
   text-align: center;
   transition-duration: 0.4s;
@@ -134,6 +134,10 @@ main article p {
   margin-bottom: 1em;
 }
 
+#kookys {
+  margin-top: 3em;
+}
+
 /* --------------------------------------------Our Recipe--------------------------------------------------- */
 
 #recipe {
@@ -201,7 +205,7 @@ label {
 }
 
 #sales header h1{
-  display: inline-block;
+  display: inline;
   color: #e91133;
   font-size: 50px;
 }
@@ -223,6 +227,10 @@ table {
 
 th, td {
   border: 2px solid #ede9dd;
+}
+
+#sales table th:last-child {
+  background-color: #94d9d4;
 }
 
 tbody tr:nth-child(odd) {

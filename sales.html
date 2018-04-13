@@ -21,14 +21,10 @@
     <form id="input-new-store-form">
       <fieldset>
         <legend>Add a new store</legend>
-        <!-- <label>New Store Location</label> -->
-        <input type="text" id="storeName-input" name="storeName" placeholder="New Store Location" />
-        <!-- <label>Minimum Customer Estimate</label> -->
-        <input type="number" id="minCustomer-input" name="minCustomer" min="0" placeholder="Minimum Customer"/>
-        <!-- <label>Maximum Customer Estimate</label> -->
-        <input type="number" id="maxCustomer-input" name="maxCustomer" min="0" placeholder="Maximum Customer"/>
-        <!-- <label>Average Cookie Sold per Customer</label> -->
-        <input type="number" id="avgCookieSale-input" name="avgCookieSale" min="0" step="0.1" placeholder="Avg. Cookie/Person"/>
+        <input type="text" id="storeName-input" name="storeName" placeholder="New Store Location" required/>
+        <input type="number" id="minCustomer-input" name="minCustomer" min="0" placeholder="MIN Customer/hour" required/>
+        <input type="number" id="maxCustomer-input" name="maxCustomer" min="0" placeholder="MAX Customer/hour" required/>
+        <input type="number" id="avgCookieSale-input" name="avgCookieSale" min="0" step="0.1" placeholder="Avg. Cookie/Person" required/>
         <input type="submit">
       </fieldset>
     </form>

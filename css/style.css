@@ -127,16 +127,15 @@ main article p {
 /* --------------------------------------------Our Story--------------------------------------------------- */
 
 #ourInfo {
-  margin-top: 0px
+  margin-top: 0px;
+  line-height: 1.2;
 }
 
 #ourInfo p:first-child {
   margin-bottom: 1em;
 }
 
-#kookys {
-  margin-top: 3em;
-}
+
 
 /* --------------------------------------------Our Recipe--------------------------------------------------- */
 

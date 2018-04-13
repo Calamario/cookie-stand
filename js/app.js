@@ -102,7 +102,6 @@ function renderHourlyTotal() {
     totalEachHour = 0;
   }
   tdEl = createEl(totalInADay, 'td');
-  tdEl.setAttribute('id','grandTotal');
   trEl.appendChild(tdEl);
   tFootEl.appendChild(trEl);
 }
@@ -127,6 +126,7 @@ function renderHourlyTotal() {
 //     tableEl.appendChild(trEl);
 //   }
 // }
+
 
 // Did an event happen? Here's what needs to go down!
 function handleNewStoreForm(event){

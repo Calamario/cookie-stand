@@ -12,29 +12,49 @@ body {
 header div {
   width: fit-content;
   margin: 0 auto;
-  margin-top: 3em;
+  margin-top: 1em;
   margin-bottom: 3em;
   text-align: center;
   transition-duration: 0.4s;
   cursor: pointer;
-}
-
-header div:hover {
-  border-radius: 10px;
-  background-color: #fcaaa4;
+  position: relative;
+  text-align: center;
 }
 
 header div h1 {
-  font-size: 50px;
+  color: #94d9d4;
+  width: 60%;
+  font-size: 40px;
   font-family: 'Vidaloka', serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 header div h2 {
+  color: #94d9d4;
   line-height: 1.5;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header div img {
+  width: 80%;
+}
+
+#my-container:hover {
+  opacity: 0.5;
+}
+
+
+header div img {
+  opacity: 0.5;
 }
 
 nav {
-
   text-align: center;
 }
 
@@ -61,7 +81,7 @@ nav ul li {
 }
 
 
-/* --------------------------------------------Body--------------------------------------------------- */
+/* -------------------------------------------Main--------------------------------------------------- */
 
 main {
   width: 90%;

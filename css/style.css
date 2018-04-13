@@ -12,29 +12,49 @@ body {
 header div {
   width: fit-content;
   margin: 0 auto;
-  margin-top: 3em;
+  margin-top: 0.5em;
   margin-bottom: 3em;
   text-align: center;
   transition-duration: 0.4s;
   cursor: pointer;
-}
-
-header div:hover {
-  border-radius: 10px;
-  background-color: #fcaaa4;
+  position: relative;
+  text-align: center;
 }
 
 header div h1 {
-  font-size: 50px;
+  color: #94d9d4;
+  width: 60%;
+  font-size: 40px;
   font-family: 'Vidaloka', serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 header div h2 {
+  color: #94d9d4;
   line-height: 1.5;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header div img {
+  width: 80%;
+}
+
+#my-container:hover {
+  opacity: 0.5;
+}
+
+
+header div img {
+  opacity: 0.5;
 }
 
 nav {
-
   text-align: center;
 }
 
@@ -61,7 +81,7 @@ nav ul li {
 }
 
 
-/* --------------------------------------------Body--------------------------------------------------- */
+/* -------------------------------------------Main--------------------------------------------------- */
 
 main {
   width: 90%;
@@ -112,6 +132,10 @@ main article p {
 
 #ourInfo p:first-child {
   margin-bottom: 1em;
+}
+
+#kookys {
+  margin-top: 3em;
 }
 
 /* --------------------------------------------Our Recipe--------------------------------------------------- */
@@ -181,7 +205,7 @@ label {
 }
 
 #sales header h1{
-  display: inline-block;
+  display: inline;
   color: #e91133;
   font-size: 50px;
 }
@@ -203,6 +227,10 @@ table {
 
 th, td {
   border: 2px solid #ede9dd;
+}
+
+#sales table th:last-child {
+  background-color: #94d9d4;
 }
 
 tbody tr:nth-child(odd) {

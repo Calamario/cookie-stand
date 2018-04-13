@@ -10,9 +10,18 @@ body {
 /* --------------------------------------------Header--------------------------------------------------- */
 
 header div {
+  width: fit-content;
+  margin: 0 auto;
   margin-top: 3em;
   margin-bottom: 3em;
   text-align: center;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+header div:hover {
+  border-radius: 10px;
+  background-color: #fcaaa4;
 }
 
 header div h1 {
@@ -50,6 +59,7 @@ nav ul li {
   background-color: #94d9d4;
   color: #fb9a93;
 }
+
 
 /* --------------------------------------------Body--------------------------------------------------- */
 

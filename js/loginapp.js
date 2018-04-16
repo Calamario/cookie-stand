@@ -11,12 +11,10 @@ function openSalesPage(event) {
   }
 }
 
+var formEl = document.getElementById('loginToEmployee');
+formEl.addEventListener('submit', openSalesPage);
 
 var titleEl = document.getElementById('my-container');
 titleEl.addEventListener('click', function() {
   window.location.href = '../index.html';
 });
-
-var formEl = document.getElementById('loginToEmployee');
-formEl.addEventListener('submit', openSalesPage);
-

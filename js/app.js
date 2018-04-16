@@ -106,6 +106,8 @@ function renderHourlyTotal() {
   tFootEl.appendChild(trEl);
 }
 
+
+
 // Turned off since made in one function. Will keep for future reference on Logic.
 // Makes a new table to store how many employees are needed at each location per hour!
 // function totalTosserNeeded() {
@@ -138,6 +140,7 @@ function handleNewStoreForm(event){
   newStore.renderRow();
   tFootEl.removeChild(document.getElementById('removeMe'));
   renderHourlyTotal();
+  formElement.reset();
 }
 
 // Listen for Events!
